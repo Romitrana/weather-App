@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Weather-data</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content-wrapper" id="wrap1">
+        <p id="heading-app">Weather App</p>
+        <div id="input-city">
+          <input
+            type="text"
+            id="city"
+            placeholder="Enter city name here..."
+            value=""
+          /><br />
+          <button id="btn">Submit</button>
+          <p id="warn">*Please enter proper city Name</p>
+        </div>
+      </div>
+      <!-- wrapper 2 -->
+      <div class="content-wrapper2" id="wrap2">
+        <p id="heading-app">
+          <i class="fa-sharp fa-solid fa-arrow-left" id="goback"></i>
+          Weather App
+        </p>
+        <h5>
+          <span id="date"></span> <span id="month"></span>,
+          <span id="year"></span>
+        </h5>
+
+        <img
+          id="image_weather"
+          src="https://openweathermap.org/img/w/10d.png"
+        />
+        <div id="temp">
+          <span id="degree"></span><span id="celcius">&#8451;</span>
+        </div>
+        <span id="cloudy"></span>
+        <span id="address"
+          ><i class="fa-solid fa-location-dot"></i><span id="cityName"></span>,
+          <span id="state"></span>,<span id="country"></span
+        ></span>
+        <div class="more-info">
+          <div>
+            <p>
+              <i class="fa-solid fa-arrow-up"></i> MAX : <span id="max"></span
+              ><span class="units"> &#8451;</span>
+            </p>
+          </div>
+          <div>
+            <p style="text-align: right">
+              <span id="min"></span><span class="units"> &#8451;</span> : MIN
+              <i class="fa-solid fa-arrow-down"></i>
+            </p>
+          </div>
+          <div>
+            <p>
+              <i class="fa-solid fa-wind"></i> WIND : <span id="wind"></span
+              ><span class="units"> km/h</span>
+            </p>
+          </div>
+          <div>
+            <p style="text-align: right">
+              <span id="humidity"></span><span class="units">%</span> : Humidity
+              <i class="fa-solid fa-droplet"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- wrapper2 -->
+      <!-- ERROR wrapper -->
+      <div id="err" class="content-wrapper3">
+        <h4>ERROR 404</h4>
+        <p>Resource Not Found</p>
+        <h6>reasons may be</h6>
+        <ul>
+          <li>No internet Connection</li>
+          <li>No server response</li>
+          <li>City doesn't Exists</li>
+        </ul>
+      </div>
+      <!-- ERROR wrapper -->
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>
